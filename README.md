@@ -4,7 +4,7 @@
 
 Find exactly the papers you need using semantic search, multi-dimensional filtering, and push them directly to your Zotero library.
 
-**Live Demo**: [cgutt-hub.github.io/5ha99y/paper-finder](https://cgutt-hub.github.io/5ha99y/paper-finder)
+**Live Demo**: [cgutt-hub.github.io/paperFinder](https://cgutt-hub.github.io/paperFinder)
 
 ## Two Ways to Use
 
