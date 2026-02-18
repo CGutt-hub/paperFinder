@@ -4,12 +4,13 @@
 
 Find exactly the papers you need using semantic search, multi-dimensional filtering, and push them directly to your Zotero library.
 
-**Live Demo**: [cgutt-hub.github.io/paperFinder](https://cgutt-hub.github.io/paperFinder)
+**Web Version**: [cgutt-hub.github.io/5ha99y/paper-finder/](https://cgutt-hub.github.io/5ha99y/paper-finder/)
 
-## Two Ways to Use
+## About
 
-1. **Web Version** (recommended) - No installation needed, runs in your browser
-2. **CLI Version** - Python command-line tool for power users
+Paper Finder is available as a **Python CLI tool** for power users who want to integrate academic paper search into their workflows.
+
+The **web interface** is hosted as part of the main 5ha99y site and provides a user-friendly way to search papers without any installation.
 
 ## Features
 
