@@ -395,12 +395,12 @@
 
             <h2>About Paper Finder</h2>
             <p>
-                Paper Finder is an AI-powered academic paper search tool that helps you discover, download, and organize scientific literature from multiple sources, including Semantic Scholar, arXiv, and SearXNG. It supports advanced search queries, citation export, and batch downloads for efficient research workflows.
+                Paper Finder is an AI-powered academic paper search tool that helps you discover, download, and organize scientific literature from multiple sources, including Semantic Scholar and arXiv. It supports advanced search queries, citation export, and batch downloads for efficient research workflows.
             </p>
             <ul>
                 <li><strong>Features:</strong>
                     <ul>
-                        <li>Search across multiple databases and the web</li>
+                        <li>Search across multiple academic databases</li>
                         <li>Download papers in PDF format</li>
                         <li>Export citations to Zotero, BibTeX, and JSON</li>
                         <li>Batch search and download for large queries</li>
@@ -410,7 +410,7 @@
                 <li><strong>How it works:</strong>
                     <ul>
                         <li>Enter your search query and select sources</li>
-                        <li>Paper Finder uses APIs and SearXNG to find relevant papers</li>
+                        <li>Paper Finder uses academic APIs to find relevant papers</li>
                         <li>Results are shown with download and export options</li>
                     </ul>
                 </li>
@@ -461,7 +461,6 @@
                         <div class="checkbox-row">
                             <label><input type="checkbox" id="source-ss" checked> Semantic Scholar</label>
                             <label><input type="checkbox" id="source-arxiv" checked> arXiv</label>
-                            <label><input type="checkbox" id="source-searxng"> SearXNG</label>
                         </div>
                     </div>
                     <div class="form-group">
@@ -534,13 +533,6 @@
                 <div class="form-group">
                     <label for="zotero-user">User ID</label>
                     <input type="text" id="zotero-user" placeholder="Numeric user ID">
-                </div>
-
-                <h3>SearXNG (optional)</h3>
-                <p>Use your own instance for broader web search (Google Scholar, PubMed, BASE, etc).</p>
-                <div class="form-group">
-                    <label for="searxng-url">Instance URL</label>
-                    <input type="url" id="searxng-url" placeholder="https://searx.example.com">
                 </div>
 
                 <div id="settings-status"></div>
