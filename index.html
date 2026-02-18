@@ -384,11 +384,6 @@
 <body>
     <!-- Header loaded from 5ha99y -->
     <div id="header-placeholder"></div>
-    
-    <!-- Settings button for this tool -->
-    <div style="position: fixed; top: 1rem; right: 4.5rem; z-index: 1000;">
-        <button id="settings-btn" class="theme-switch" title="Settings">⚙️</button>
-    </div>
 
     <main>
         <div class="content">
@@ -425,6 +420,33 @@
 
             <h1>Paper Finder</h1>
             <p>Search academic papers with AI-powered semantic ranking. Filter by year, citations, fields of study. Export directly to Zotero.</p>
+
+            <!-- Settings -->
+            <h2>Settings</h2>
+            <div class="card">
+                <blockquote>API keys are stored only in your browser. They are never sent anywhere except the respective API endpoints.</blockquote>
+
+                <h3>OpenAI (optional)</h3>
+                <p>Enables AI-powered ranking and query expansion.</p>
+                <div class="form-group">
+                    <label for="openai-key">API Key</label>
+                    <input type="password" id="openai-key" placeholder="sk-...">
+                </div>
+
+                <h3>Zotero (optional)</h3>
+                <p>Enables direct export to your library.</p>
+                <div class="form-group">
+                    <label for="zotero-key">API Key</label>
+                    <input type="password" id="zotero-key" placeholder="Zotero API key">
+                </div>
+                <div class="form-group">
+                    <label for="zotero-user">User ID</label>
+                    <input type="text" id="zotero-user" placeholder="Numeric user ID">
+                </div>
+
+                <div id="settings-status"></div>
+                <button id="settings-save" type="button">Save Settings</button>
+            </div>
 
             <!-- Search -->
             <div class="card">
@@ -506,43 +528,6 @@
         </div>
     </main>
 
-    <!-- Settings Modal -->
-    <div id="settings-modal" class="modal hidden">
-        <div class="modal-backdrop"></div>
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Settings</h2>
-                <button class="modal-close" id="settings-close">×</button>
-            </div>
-            <div class="modal-body">
-                <blockquote>API keys are stored only in your browser. They are never sent anywhere except the respective API endpoints.</blockquote>
-
-                <h3>OpenAI (optional)</h3>
-                <p>Enables AI-powered ranking and query expansion.</p>
-                <div class="form-group">
-                    <label for="openai-key">API Key</label>
-                    <input type="password" id="openai-key" placeholder="sk-...">
-                </div>
-
-                <h3>Zotero (optional)</h3>
-                <p>Enables direct export to your library.</p>
-                <div class="form-group">
-                    <label for="zotero-key">API Key</label>
-                    <input type="password" id="zotero-key" placeholder="Zotero API key">
-                </div>
-                <div class="form-group">
-                    <label for="zotero-user">User ID</label>
-                    <input type="text" id="zotero-user" placeholder="Numeric user ID">
-                </div>
-
-                <div id="settings-status"></div>
-            </div>
-            <div class="modal-footer">
-                <button id="settings-save" type="submit">Save</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Paper Modal -->
     <div id="paper-modal" class="modal hidden">
         <div class="modal-backdrop"></div>
@@ -580,18 +565,6 @@
         // Load components on page load
         loadComponent('https://cgutt-hub.github.io/5ha99y/header.html', 'header-placeholder');
         loadComponent('https://cgutt-hub.github.io/5ha99y/footer.html', 'footer-placeholder');
-
-        
-        // Settings modal
-        document.getElementById('settings-btn').addEventListener('click', () => {
-            document.getElementById('settings-modal').classList.remove('hidden');
-        });
-        document.getElementById('settings-close').addEventListener('click', () => {
-            document.getElementById('settings-modal').classList.add('hidden');
-        });
-        document.getElementById('settings-modal').querySelector('.modal-backdrop').addEventListener('click', () => {
-            document.getElementById('settings-modal').classList.add('hidden');
-        });
 
         // Example search buttons
         document.querySelectorAll('[data-query]').forEach(btn => {
